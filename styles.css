@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(30, 35, 48);
+    background: linear-gradient(153deg, #2B3143 10.18%, #1E2330 65.36%, #0F1420 85.27%);
 }
 
 .boxBelow{
@@ -58,7 +58,7 @@ h2 {
     
     border: solid;
     border-right: none;
-    background: rgb(215, 9, 9);
+    background: rgb(255, 255, 255);
     border-color: rgb(52, 99, 99);
     border-width: 0.5rem;
     border-radius: 3px;
