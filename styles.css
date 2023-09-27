@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(153deg, #2B3143, #1E2330, #0F1420);
+    background: linear-gradient(153deg, #2d3757, #1E2330, #0c1220);
     background-attachment: fixed;
     background-size: cover;
 
@@ -161,17 +161,38 @@ h2 {
 
 h4{
     color: black;
-    margin: auto;
+    margin: 5px;
     margin-left: 2px;
 }
 
-.input-label {
+.input-label-width, .input-label-length {
     /*font-weight: bold;*/
     margin-left: 2px;
 }
 
+.input-label-width{
+    margin-top: 5px;
+}
+
 .robot-width-input, .robot-length-input {
-    width: 70%; /* Make the input fields take up the full width of the container */
-    margin-bottom: 10px; /* Add some spacing between the input fields */
+    width: 70%;
+    margin-bottom: 10px;
     margin-left: 2px;
+}
+
+.input-label{
+    background: rgba(56, 114, 140, 0.562);
+}
+
+.input-container {
+    /* Initial state of the container */
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: rgb(56, 114, 140);
+}
+
+.dimensions-container {
+    /* Hidden by default */
+    display: none;
 }
