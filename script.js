@@ -3,22 +3,80 @@ document.addEventListener("DOMContentLoaded", function () {
     const dimensionsContainer = document.querySelector(".dimensions-container");
     const dimensionsLabel = document.querySelector(".input-label");
 
-    let isClicked = false; // Initialize a variable to track the click state
+    // Additions for the button and menu
+    const menuButton = document.getElementById("menu-button");
+    const menuContainer = document.getElementById("menu-container");
+    const editModeItem = document.getElementById("edit-mode");
+    const exitEditModeItem = document.getElementById("exit-edit-mode");
+    const field = document.querySelector(".field");
 
+    let isClicked = false; // Initialize a variable to track the click state
+    let isEditMode = false;
+    let circleCounter = 1;
+
+    // Add event listener for the toggleButton click event
     toggleButton.addEventListener("click", function () {
         // Toggle the background color and dimensions container visibility
         if (isClicked) {
-            dimensionsLabel.style.background = '';
-            dimensionsContainer.style.display = 'none';
+            dimensionsLabel.style.background = "";
+            dimensionsContainer.style.display = "none";
         } else {
-            dimensionsLabel.style.background = 'rgba(6, 64, 90, 0.562)';
-            dimensionsContainer.style.display = 'block';
+            dimensionsLabel.style.background = "rgba(6, 64, 90, 0.562)";
+            dimensionsContainer.style.display = "block";
         }
-        
+
         // Toggle the click state
         isClicked = !isClicked;
     });
 
+    // Additions for the button and menu
+    menuButton.addEventListener("click", function () {
+        // Toggle menu visibility
+        menuContainer.style.display = menuContainer.style.display === "block" ? "none" : "block";
+    });
+
+    editModeItem.addEventListener("click", function () {
+        // Enter edit mode
+        isEditMode = true;
+        field.style.cursor = "crosshair";
+    });
+
+    exitEditModeItem.addEventListener("click", function () {
+        // Exit edit mode
+        isEditMode = false;
+        field.style.cursor = "auto";
+    });
+
+    field.addEventListener("mousedown", function (e) {
+        if (isEditMode && e.button === 0) {
+            // Left click in edit mode - Add a numbered circle
+            const circle = document.createElement("div");
+            circle.className = "numbered-circle";
+            circle.textContent = circleCounter;
+            circle.style.left = e.clientX - field.getBoundingClientRect().left + "px";
+            circle.style.top = e.clientY - field.getBoundingClientRect().top + "px";
+            field.appendChild(circle);
+            circleCounter++;
+        } else if (isEditMode && e.button === 2) {
+            // Right click in edit mode - Remove circles
+            const circles = field.querySelectorAll(".numbered-circle");
+            circles.forEach((circle) => {
+                if (isInsideCircle(circle, e.clientX, e.clientY)) {
+                    circle.remove();
+                }
+            });
+        }
+    });
+
+    // Function to check if a point (x, y) is inside a circle
+    function isInsideCircle(circle, x, y) {
+        const circleX = circle.offsetLeft + circle.offsetWidth / 2;
+        const circleY = circle.offsetTop + circle.offsetHeight / 2;
+        const distance = Math.sqrt(Math.pow(x - circleX, 2) + Math.pow(y - circleY, 2));
+        return distance <= circle.offsetWidth / 2;
+    };
+
+    // Mouseover and mouseout events for the toggleButton
     toggleButton.addEventListener("mouseover", function () {
         dimensionsLabel.style.background = 'rgba(6, 64, 90, 0.562)';
     });

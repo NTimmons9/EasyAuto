@@ -196,3 +196,45 @@ h4{
     /* Hidden by default */
     display: none;
 }
+
+#menu-button,
+#edit-mode,
+#exit-edit-mode {
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    font-size: 18px; /* Adjust the size as needed */
+    cursor: pointer;
+    list-style: none; /* Remove bullet points */
+    color: azure;
+}
+
+#menu-button:hover,
+#edit-mode:hover,
+#exit-edit-mode:hover {
+    color: rgba(99, 192, 235, 0.562); /* Change color on hover */
+}
+
+#menu-button {
+    margin-top: 0px;
+}
+
+#edit-mode {
+    /* Adjust the margin to position the pencil icon as needed */
+    margin-top: -30px; /* Adjust this value to separate it from the dot */
+}
+
+#exit-edit-mode {
+    /* Adjust the margin to position the check mark icon as needed */
+    margin-right: 3px;
+    margin-top: -5px; /* Adjust this value to separate it from the pencil icon */
+}
+
+#menu-container {
+    position: absolute;
+    top: 30px; /* Adjust as needed */
+    right: 10px;
+    display: none;
+}
+
+
