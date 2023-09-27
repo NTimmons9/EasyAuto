@@ -16,7 +16,7 @@ body {
     margin-top: 1rem;
     padding: .25rem;
     border-radius: .4rem;
-    width: 17.5%;
+    width: 15.75%;
     
 }
 
@@ -24,15 +24,15 @@ h1 {
     text-align: center;
     margin-top: 1%;
     color: rgb(240, 251, 255);
-    font-size: 300%;
-    font-size: 3.5vw;
+    font-size: 270%;
+    font-size: 3.15vw;
     margin-bottom: 0%;
 }
 
 h2 {
     text-align: center;
     font-size: 1rem;
-    font-size: 1.2vw;
+    font-size: 1.08vw;
     color: rgb(180, 191, 206);
     margin-top: 0em;
     margin-bottom: .3em;
@@ -55,19 +55,75 @@ h2 {
 
 .field {
     position: relative;
-    width: 60%;
+    width: 40%;
     height: 0;
-    padding-bottom: 60%;
+    padding-bottom: 40%;
     margin-left: 0%;
     
     border: solid;
     border-right: none;
     background: rgb(81, 92, 99);
     border-color: rgb(52, 99, 99);
-    border-width: 0.5rem;
+    border-width: 0.25rem;
     border-radius: 3px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    overflow: hidden;
+}
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.grid-line {
+    background-color: black;
+}
+  
+.vertical {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+}
+  
+.horizontal {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+}
+  
+.grid-line:nth-child(1) {
+    left: 16.6666%;
+}
+.grid-line:nth-child(2) {
+    left: 33.33333%;
+}
+.grid-line:nth-child(3) {
+    left: 50%;
+}
+.grid-line:nth-child(4) {
+    left: 66.6666%;
+}
+.grid-line:nth-child(5) {
+    left: 83.3333%;
+}
+.grid-line:nth-child(6) {
+    top: 16.6666%;
+}
+.grid-line:nth-child(7) {
+    top: 33.3333%;
+}
+.grid-line:nth-child(8) {
+    top: 50%;
+}
+.grid-line:nth-child(9) {
+    top: 66.6666%;
+}
+.grid-line:nth-child(10) {
+    top: 83.3333%;
 }
 
 .output  {
@@ -80,7 +136,7 @@ h2 {
     border-left: none;
     background: rgb(223, 231, 236);
     border-color: rgb(52, 99, 99);
-    border-width: 0.5rem;
+    border-width: 0.25rem;
     border-radius: 3px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -97,10 +153,25 @@ h2 {
     border: solid;
     background: rgba(106, 164, 190, 0.562);
     border-color: rgb(52, 99, 99);
-    border-width: 0.5rem;
+    border-width: 0.25rem;
     border-radius: 3px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
+h4{
+    color: black;
+    margin: auto;
+    margin-left: 2px;
+}
 
+.input-label {
+    /*font-weight: bold;*/
+    margin-left: 2px;
+}
+
+.robot-width-input, .robot-length-input {
+    width: 70%; /* Make the input fields take up the full width of the container */
+    margin-bottom: 10px; /* Add some spacing between the input fields */
+    margin-left: 2px;
+}
