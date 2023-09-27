@@ -2,7 +2,11 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(30, 35, 48);
+    background: linear-gradient(153deg, #2B3143, #1E2330, #0F1420);
+    background-attachment: fixed;
+    background-size: cover;
+
+
 }
 
 .boxBelow{
@@ -12,30 +16,30 @@ body {
     margin-top: 1rem;
     padding: .25rem;
     border-radius: .4rem;
-    width: 250px;
+    width: 17.5%;
     
 }
 
 h1 {
-    text-align: left;
-    margin-left: 20px;
-    margin-top: .1rem;
+    text-align: center;
+    margin-top: 1%;
     color: rgb(240, 251, 255);
-    font-size: 3rem;
-    margin-bottom: 0rem;
+    font-size: 300%;
+    font-size: 3.5vw;
+    margin-bottom: 0%;
 }
 
 h2 {
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
+    font-size: 1.2vw;
     color: rgb(180, 191, 206);
     margin-top: 0em;
-    margin-left: 2.2em;
     margin-bottom: .3em;
 }
 
 .box-container{
-    border: 5px solid rgb(240, 251, 255);
+    /*border: 5px solid rgb(240, 251, 255);*/
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;
@@ -51,14 +55,14 @@ h2 {
 
 .field {
     position: relative;
-    width: 40%;
+    width: 60%;
     height: 0;
-    padding-bottom: 40%;
+    padding-bottom: 60%;
     margin-left: 0%;
     
     border: solid;
     border-right: none;
-    background: rgb(255, 255, 255);
+    background: rgb(81, 92, 99);
     border-color: rgb(52, 99, 99);
     border-width: 0.5rem;
     border-radius: 3px;
@@ -74,7 +78,7 @@ h2 {
     padding-bottom: 40%;
     border: solid;
     border-left: none;
-    background: rgb(81, 92, 99);
+    background: rgb(223, 231, 236);
     border-color: rgb(52, 99, 99);
     border-width: 0.5rem;
     border-radius: 3px;
