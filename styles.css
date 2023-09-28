@@ -221,13 +221,13 @@ h4{
 
 #edit-mode {
     /* Adjust the margin to position the pencil icon as needed */
-    margin-top: -30px; /* Adjust this value to separate it from the dot */
+    margin-top: -20px; /* Adjust this value to separate it from the dot */
 }
 
 #exit-edit-mode {
     /* Adjust the margin to position the check mark icon as needed */
     margin-right: 3px;
-    margin-top: -5px; /* Adjust this value to separate it from the pencil icon */
+    margin-top: 0px; /* Adjust this value to separate it from the pencil icon */
 }
 
 #menu-container {
