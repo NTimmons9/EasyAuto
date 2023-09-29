@@ -95,6 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    saveButton.addEventListener("mouseover", function() {
+        field.style.cursor = "pointer";
+    });
+
     saveButton.addEventListener("mousedown", function() {
         saveButton.style.background = "radial-gradient(rgb(175,175,175),rgb(200,200,200))"
         document.getElementById("outputText").innerHTML = 
