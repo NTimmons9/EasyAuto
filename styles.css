@@ -188,7 +188,7 @@ h4{
     /* Initial state of the container */
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 5px;
     background: rgb(56, 114, 140);
 }
 
@@ -196,6 +196,19 @@ h4{
     /* Hidden by default */
     display: none;
 }
+
+.save{
+    color:black;
+    background: radial-gradient(white,rgb(200,200,200));
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
 
 #menu-button,
 #edit-mode,
@@ -236,5 +249,4 @@ h4{
     right: 10px;
     display: none;
 }
-
 

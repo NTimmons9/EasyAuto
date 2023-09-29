@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const exitEditModeItem = document.getElementById("exit-edit-mode");
     const field = document.querySelector(".field");
 
+    //for save button
+    const saveButton = document.querySelector(".save");
+
     let isClicked = false; // Initialize a variable to track the click state
     let isEditMode = false;
     let circleCounter = 1;
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dimensionsLabel.style.background = "";
             dimensionsContainer.style.display = "none";
         } else {
-            dimensionsLabel.style.background = "rgba(6, 64, 90, 0.562)";
+            dimensionsLabel.style.background = "rgb(6, 64, 90)";
             dimensionsContainer.style.display = "block";
         }
 
@@ -78,13 +81,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mouseover and mouseout events for the toggleButton
     toggleButton.addEventListener("mouseover", function () {
-        dimensionsLabel.style.background = 'rgba(6, 64, 90, 0.562)';
+        if(!isClicked){
+            dimensionsLabel.style.background = 'rgb(20, 94, 120)';
+        }
     });
 
     toggleButton.addEventListener("mouseout", function () {
         // Only reset the background color if it's not in the clicked state
         if (!isClicked) {
             dimensionsLabel.style.background = '';
+        } else {
+            dimensionsLabel.style.background = "rgb(6, 64, 90)";
         }
     });
+
+    saveButton.addEventListener("mousedown", function() {
+        saveButton.style.background = "radial-gradient(rgb(175,175,175),rgb(200,200,200))"
+        document.getElementById("outputText").innerHTML = 
+        document.getElementById("robotWidth").value + "\n" 
+        + document.getElementById("robotLength").value;
+    });
+    
+    saveButton.addEventListener("mouseup", function(){
+        saveButton.style.background = ''
+    });
+
 });
