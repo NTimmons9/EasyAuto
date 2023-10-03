@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //for save button
     const saveButton = document.querySelector(".save");
+    const robot = document.querySelector(".robot");
 
     let isClicked = false; // Initialize a variable to track the click state
     let isEditMode = false;
@@ -102,8 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
     saveButton.addEventListener("mousedown", function() {
         saveButton.style.background = "radial-gradient(rgb(175,175,175),rgb(200,200,200))"
         document.getElementById("outputText").innerHTML = 
-        document.getElementById("robotWidth").value + "\n" 
-        + document.getElementById("robotLength").value;
+        "Robot Width: " + document.getElementById("robotWidth").value + "in" + "<br />" 
+        + "Robot Length: " + document.getElementById("robotLength").value + "in";
+        robot.style.width = ((document.getElementById("robotWidth").value)/144) * 100 + "%";
+        robot.style.height = ((document.getElementById("robotLength").value)/144) * 100 + "%";
+        robot.style.marginLeft = (50 - (((document.getElementById("robotWidth").value/144)*100)/2)) + "%";
+        robot.style.marginTop = (50 - (((document.getElementById("robotLength").value/144)*100)/2)) + "%";
     });
     
     saveButton.addEventListener("mouseup", function(){
